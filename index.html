@@ -6,12 +6,12 @@
     <title>Pavla Rotterová - Postklasická homeopatie</title>
     <style>
         :root {
-            --temna-zelena: #1e3f20;
-            --svetla-zelena:  #f4f9e4; /* Nová, světlá žlutozelená s hřejivým tónem */
-            --text-hlavni: #2b3a2c;
-            --text-svetly: #5a6e5b;
+            --temna-zelena: #1e3a1f;
+            --svetla-zelena: #f4f9e4; /* Vaše světlá žlutozelená s hřejivým tónem */
+            --text-hlavni: #1f2b20;
+            --text-svetly: #4e5e4f;
             --bila: #ffffff;
-            /* Přechod vyjadřující vitální sílu a vývoj: žlutá -> oranžová -> červená */
+            /* Přechod vyjadřující vitální sílu: žlutá -> oranžová -> červená */
             --teply-gradient: linear-gradient(135deg, #ffd000 0%, #ff7b00 50%, #d90429 100%);
         }
 
@@ -38,24 +38,12 @@
             background: var(--bila);
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(30, 63, 32, 0.05);
+            box-shadow: 0 10px 30px rgba(30, 58, 31, 0.05);
             text-align: center;
             border-top: 8px solid var(--temna-zelena);
             position: relative;
             overflow: hidden;
             margin-bottom: 30px;
-        }
-
-        .karta-hlavni::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 100px;
-            height: 100px;
-            background: var(--teply-gradient);
-            border-radius: 50%;
-            opacity: 0.15;
         }
 
         .linie-prechodu {
@@ -96,11 +84,12 @@
             margin: 15px 0;
         }
 
-        .sekce-mista {
+        .sekce-obsah {
             background: var(--bila);
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(30, 63, 32, 0.05);
+            box-shadow: 0 10px 30px rgba(30, 58, 31, 0.05);
+            margin-bottom: 30px;
         }
 
         .misto-item {
@@ -145,6 +134,53 @@
             display: inline-block;
             margin-top: 15px;
         }
+
+        /* Styly pro ceník */
+        .cenik-polozka {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .cenik-nazev {
+            font-weight: bold;
+            color: var(--temna-zelena);
+        }
+
+        .cenik-cena {
+            font-weight: bold;
+            color: #ff7b00;
+            white-space: nowrap;
+            font-size: 1.2rem;
+        }
+
+        .cenik-popis {
+            font-size: 0.95rem;
+            color: var(--text-svetly);
+            margin-top: -10px;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .kontakt-udaj {
+            font-size: 1.2rem;
+            margin: 12px 0;
+            color: var(--temna-zelena);
+        }
+
+        .kontakt-udaj strong {
+            color: #ff7b00;
+        }
+
+        .kontakt-poznamka {
+            font-size: 0.95rem;
+            color: var(--text-svetly);
+            margin-left: 32px;
+            margin-top: -8px;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -162,7 +198,7 @@
         </div>
 
         <!-- Sekce Kde se potkáme -->
-        <div class="sekce-mista">
+        <div class="sekce-obsah">
             <h3>Kde se můžeme potkat?</h3>
             
             <div class="misto-item">
@@ -170,12 +206,13 @@
                 <div class="misto-popis">Osobní konzultace v klidném a bezpečném zázemí. Přesnou adresu vám ráda upřesním při domluvě termínu.</div>
             </div>
 
-<!--   prozatim skryti Coorazonu
+            <!-- Následující sekce je skrytá poznámkou (v budoucnu ji stačí odtud vyjmout)
             <div class="misto-item">
                 <div class="misto-nazev">Centrum Corazon (Čechovice)</div>
-             <div class="misto-popis">Po předchozí domluvě je možné sezení v příjemném prostředí tohoto rodinného areálu – tuto možnost nabízím za příznivého počasí.</div>            </div>
--->
-            
+                <div class="misto-popis">Po předchozí domluvě je možné sezení v příjemném prostředí tohoto rodinného areálu – tuto možnost nabízím za příznivého počasí.</div>
+            </div>
+            -->
+
             <div class="misto-item">
                 <div class="misto-nazev">U vás doma</div>
                 <div class="misto-popis">Možnost návštěvy po individuální domluvě, je-li pro vás doprava složitá a nebude-li to logisticky příliš náročné.</div>
@@ -183,11 +220,28 @@
 
             <div class="misto-item">
                 <div class="misto-nazev">Online (přes video hovor)</div>
-                <div class="misto-popis">Tuto možnost doporučuji především tehdy, <span class="zvyrazneni">pokud nás dělí velká vzdálenost</span>, případně pro akutní stavy či kontrolní konzultace. Pro úvodní odebírání Vašeho případu a sledování vývoje patologie (zdravotních problémů) v rámci života je však z hlediska účinnosti a efektivity léčby vždy nejlepším erasure řešením osobní setkání naživo.</div>
+                <div class="misto-popis">Tuto možnost doporučuji především tehdy, <span class="zvyrazneni">pokud nás dělí velká vzdálenost</span>, případně pro akutní stavy či kontrolní konzultace. Pro úvodní odebírání Vašeho případu a sledování vývoje patologie (zdravotních problémů) v rámci života je však z hlediska účinnosti a efektivity léčby vždy nejlepším řešením osobní setkání naživo.</div>
             </div>
         </div>
 
-        <!-- Sekce Kontakt s dobou volání -->
+        <!-- Sekce Ceník -->
+        <div class="sekce-obsah">
+            <h3>Ceník služeb</h3>
+            
+            <div class="cenik-polozka">
+                <span class="cenik-nazev">Úvodní konzultace (odebírání případu)</span>
+                <span class="cenik-cena">1 500 Kč</span>
+            </div>
+            <div class="cenik-popis">Délka trvání přibližně 1,5 až 2 hodiny. Cena zahrnuje detailní analýzu vývoje Vašich zdravotních problémů a následné vypracování doporučení.</div>
+
+            <div class="cenik-polozka">
+                <span class="cenik-nazev">Kontrolní konzultace</span>
+                <span class="cenik-cena">800 Kč</span>
+            </div>
+            <div class="cenik-popis">Délka trvání přibližně 45 až 60 minut. Vyhodnocení účinků podaného léku a určení dalšího postupu léčby.</div>
+        </div>
+
+        <!-- Sekce Contact s dobou volání -->
         <div class="sekce-obsah" style="border-bottom: 6px solid var(--temna-zelena);">
             <h3>Jak se objednat?</h3>
             <p>Pro domluvení termínu konzultace mě prosím kontaktujte. Pokud zrovna pracuji s klientem a nezvedám telefon, napište mi SMS nebo e-mail, ozvu se vám zpět hned, jakmile to bude možné.</p>
