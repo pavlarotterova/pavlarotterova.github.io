@@ -2,12 +2,111 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pavla Rotterová - Postklasická homeopatie</title>
+    <style>
+        /* Definice vašich barev */
+        :root {
+            --temna-zelena: #1e3f20;
+            --svetla-zelena: #f1f7f2;
+            --text-hlavni: #2b3a2c;
+            /* Přechod: žlutá -> oranžová -> červená */
+            --teply-gradient: linear-gradient(135deg, #ffd000 0%, #ff7b00 50%, #d90429 100%);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--svetla-zelena);
+            color: var(--text-hlavni);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .karta {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(30, 63, 32, 0.08);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            border-top: 8px solid var(--temna-zelena);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Dekorační linka s vaším teplým přechodem */
+        .linie-prechodu {
+            height: 6px;
+            width: 100px;
+            background: var(--teply-gradient);
+            margin: 20px auto;
+            border-radius: 3px;
+        }
+
+        h1 {
+            color: var(--temna-zelena);
+            margin-bottom: 5px;
+            font-size: 2.2rem;
+        }
+
+        h2 {
+            color: #ff7b00; /* Oranžová z přechodu pro podnadpis */
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1rem;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #4a5c4b;
+            margin: 20px 0;
+        }
+
+        .status-box {
+            background: var(--svetla-zelena);
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            color: var(--temna-zelena);
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Akcentové kolečko v pozadí pro jemný efekt */
+        .karta::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 100px;
+            height: 100px;
+            background: var(--teply-gradient);
+            border-radius: 50%;
+            opacity: 0.15;
+        }
+    </style>
 </head>
 <body>
-    <h1>Pavla Rotterová</h1>
-    <h2>Postklasická homeopatie</h2>
+
+    <div class="karta">
+        <h1>Pavla Rotterová</h1>
+        <h2>Postklasická homeopatie</h2>
+        
+        <div class="linie-prechodu"></div>
     <p>Vítejte. Pomáhám rozplétat hluboké příčiny nemocí a vracet tělo i mysl zpět do jejich přirozené harmonie.</p>
-    <p>Stránky jsou momentálně v přípravě.</p>
+    <div class="status-box">
+            🌱 Stránky pro vás momentálně připravuji
+        </div>
+    </div>
+
 </body>
 </html>
