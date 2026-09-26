@@ -11,8 +11,9 @@
             --text-hlavni: #1f2b20;
             --text-svetly: #4e5e4f;
             --bila: #ffffff;
-            /* Přechod vyjadřující vitální sílu: žlutá -> oranžová -> červená */
-            --teply-gradient: linear-gradient(135deg, #ffd000 0%, #ff7b00 50%, #d90429 100%);
+            --oranzova-akcent: #ff7b00; /* Sjednocená oranžová */
+            /* Zde se oranžová rovnou zapojí i do přechodu */
+            --teply-gradient: linear-gradient(135deg, #ffd000 0%, var(--oranzova-akcent) 50%, #d90429 100%);
         }
 
         body {
@@ -129,11 +130,11 @@
         }
 
         .zvyrazneni {
-            background: #fff8e1;
+            background: #fff3e0; 
             padding: 2px 6px;
             border-radius: 4px;
             font-weight: 600;
-            color: #d90429;
+            color: var(--oranzova-akcent); 
         }
 
         .status-box {
@@ -163,7 +164,7 @@
 
         .cenik-cena {
             font-weight: bold;
-            color: #ff7b00;
+            color: var(--oranzova-akcent); 
             white-space: nowrap;
             font-size: 1.2rem;
         }
