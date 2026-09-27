@@ -7,12 +7,12 @@
     <style>
         :root {
             --temna-zelena: #1e3a1f;
-            --svetla-zelena: #f4f9e4; /* Vaše oblíbená světlá žlutozelená */
+            --svetla-zelena: #f4f9e4; /* Vaše světlá žlutozelená s hřejivým tónem */
             --text-hlavni: #1f2b20;
             --text-svetly: #4e5e4f;
             --bila: #ffffff;
             --oranzova-akcent: #ff7b00; /* Sjednocená oranžová */
-            /* Zde se oranžová rovnou zapojí i do přechodu */
+            /* Přechod vyjadřující vitální sílu: žlutá -> oranžová -> červená */
             --teply-gradient: linear-gradient(135deg, #ffd000 0%, var(--oranzova-akcent) 50%, #d90429 100%);
         }
 
@@ -63,7 +63,7 @@
         }
 
         h2 {
-            color: #ff7b00;
+            color: var(--oranzova-akcent);
             font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -84,6 +84,16 @@
             font-size: 1.1rem;
             color: var(--text-svetly);
             margin: 15px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: var(--text-svetly);
+            font-size: 1.05rem;
+        }
+
+        li {
+            margin-bottom: 10px;
         }
 
         .sekce-obsah {
@@ -108,7 +118,7 @@
         .misto-item {
             margin-bottom: 25px;
             padding-left: 15px;
-            border-left: 3px solid #ff7b00;
+            border-left: 3px solid var(--oranzova-akcent);
         }
 
         .misto-item:last-child {
@@ -182,7 +192,7 @@
         }
 
         .kontakt-udaj strong {
-            color: #ff7b00;
+            color: var(--oranzova-akcent);
         }
 
         .kontakt-poznamka {
@@ -206,6 +216,37 @@
             <div class="status-box">
                 🌱 Stránky pro vás momentálně připravuji
             </div>
+        </div>
+
+          <!-- Sekce O mně -->
+        <div class="sekce-obsah">
+            <h3>O mně</h3>
+            <p>Moje cesta k postklasické homeopatii nebyla teoretická, ale hluboce osobní. Dvacet let jsem žila s diagnózou roztroušené sklerózy mozkomíšní. Během této doby západní medicína – i přes mou snahu a péči špičkových odborníků v ČR – nedokázala průběh nemoci zastavit. Jejich cílem byla převážně konzervace tehdejšího stavu. Vyzkoušela jsem všechno možné i nemožné: od přísných diet a hloubkových detoxikací organismu až po energetické napravování pole těla. Výsledky však nepřicházely a ataky onemocnění se neustále vracely.</p>
+            <p>Zásadní zlom nastal po předčasném porodu mého třetího dítěte. Náročné období mě srazilo psychicky dolů, což okamžitě vedlo k prudkému zhoršení mého fyzického stavu. V této krizi jsem poprvé vyzkoušela léčbu u postklasického homeopata. Během několika měsíců se progresi onemocnění podařilo zcela zastavit.</p>
+            <p>Můj stav se začal pozvolným tempem lepšit a celkově stabilizovat. I když nešlo o zázrak na počkání a proces uvolňování patologií nebyl vždy příjemný, začaly postupně ustupovat i velmi staré potíže, které mě provázely od samého počátku diagnózy. Fascinace těmito výsledky mě přivedla k rozhodnutí, že chci toto umění uzdravování těla i duše plně ovládnout.</p>
+            <p>Začátkem září 2026 jsem po tříletém studiu úspěšně složila závěrečnou zkoušku v České škole klasické a postklasické homeopatie pod vedením Mgr. Pavla Opelky, RHom. Od počátku studia se pravidelně účastním také Letních škol pořádaných Českou komorou klasické homeopatie, která je řádným členem Evropské centrální rady homeopatů (ECCH). Vzdělávání v tomto oboru vnímám jako celoživotní poslání.</p>
+            <p>Zkušenosti jsem začala sbírat již během vlastního léčení a studií, a to nejen v rámci své rodiny a přátel, ale i u lidí, kteří si ke mně postupně našli cestu. V mé praxi se již podařilo pozvolna navrátit zdraví řadě klientů – například uvolněním chronických zánětů dutin a počínajícího astmatu, díky čemuž se léčený mohl vrátit k aktivnímu fotbalu a běhu. Úspěšně pomáhám řešit také mechanické, růstové a neurologické potíže dětí (jako je úprava tlaku v uších a zmenšení nosních mandlí, což u mé dcery vedlo k okamžité nápravě sluchu a rozvoji myšlení).</p>
+        </div>
+
+        <!-- Sekce O postklasické homeopatii -->
+        <div class="sekce-obsah">
+            <h3>Jak probíhá léčba?</h3>
+            <p>Postklasická homeopatie nahlíží na člověka jako na celistvý příběh a umožňuje zacílit léčbu na organismus jako celek, případně se zaměřit na jednotlivé orgány, které potřebují vyladit ke své optimální funkci – včetně mozku a nervové soustavy (ADHD, autismus, dis- poruchy).</p>
+            <p>Pro správné pochopení postupu je důležité rozlišovat dva stavy:</p>
+            <ul>
+                <li><strong>Akutní problém:</strong> Nově vzniklý stav v současnosti, který člověk v minulosti ještě nikdy nezažil. Na řešení čistě akutních stavů tato metoda primárně určená není, neboť podáním léku se patologie nejprve uvolňuje navenek.</li>
+                <li><strong>Chronický stav:</strong> Potíže, které trvají delší dobu (od několika dní po celé roky) nebo se v životě cyklicky opakují. Postklasická homeopatie je k řešení chronických stavů naprosto výborná.</li>
+            </ul>
+            <p>Léčba dlouhodobých chronických potíží vyžaduje čas a trpělivost – tyto problémy se v těle tvořily dlouhou dobu, proto i jejich odstraňování probíhá postupně po jednotlivých vrstvách. Pomocí jednoho či dvou léků lze organismus pročistit a zoptimalizovat pouze v případě, že člověk netrpí žádnými zjevnými ani skrytými potížemi a hledá pouze prevenci. I u hlubokých stavů však klienti pociťují pozvolné a trvalé zlepšování celkové kondice.</p>
+        </div>
+
+        <!-- Sekce Čemu věnovat pozornost -->
+        <div class="sekce-obsah">
+            <h3>Čemu v průběhu léčby věnovat pozornost?</h3>
+            <p>Během homeopatické léčby je nesmírně důležité vnímat a sledovat reakce svého organismu. Reakce na podané léky mohou mít psychickou i fyzickou podobu a mohou se projevovat pozitivně i negativně.</p>
+            <p>Pozitivní změny (příval energie, lepší nálada, mírnění bolestí) lidé obvykle vnímají přirozeně. Negativní reakce mohou být přechodně nepříjemné – dochází při nich k uvolňování staré patologie z těla ven. Je však důležité mít na paměti, že v rámci postklasické homeopatie tělo uvolní vždy jen tolik zátěže, kolik samo bezpečně zvládne.</p>
+            <p><strong>Je velmi důležité si každou reakci pečlivě zapsat a poznačit si, po kterém konkrétním léku nastala.</strong> Dostatek přesných informací o dosavadním průběhu léčby a vzniklých reakcích mi v pokračovací konzultaci umožní naprosto přesně zvolit další homeopatické léky pro úspěšné pokračování Vaší léčby.</p>
+            <p>Pokud by pro Vás byla jakákoli reakce v průběhu léčby extrémně nepříjemná, omezující nebo obtěžující, neváhejte mě neprodleně kontaktovat. Společně probereme, jak si můžete ulevit a jak v léčbě bezpečně postupovat dále.</p>
         </div>
 
         <!-- Sekce Kde se potkáme -->
