@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pavla Rotterová - Postklasická homeopatie</title>
+    <title>Mgr. Pavla Rotterová, Ph.D. - Postklasická homeopatie</title>
     <style>
         :root {
             --temna-zelena: #1e3a1f;
-            --svetla-zelena: #f4f9e4; /* Vaše světlá žlutozelená s hřejivým tónem */
+            --svetla-zelena: #f4f9e4; /* Vaše světlá žlutozelená */
             --text-hlavni: #1f2b20;
             --text-svetly: #4e5e4f;
             --bila: #ffffff;
             --oranzova-akcent: #ff7b00; /* Sjednocená oranžová */
-            /* Přechod vyjadřující vitální sílu: žlutá -> oranžová -> červená */
             --teply-gradient: linear-gradient(135deg, #ffd000 0%, var(--oranzova-akcent) 50%, #d90429 100%);
         }
 
@@ -21,7 +20,7 @@
             background-color: var(--svetla-zelena);
             color: var(--text-hlavni);
             margin: 0;
-            padding: 40px 20px;
+            padding: 20px 20px 40px 20px;
             line-height: 1.6;
             display: flex;
             flex-direction: column;
@@ -35,13 +34,53 @@
             width: 100%;
         }
 
+        /* Navigační menu */
+        .hlavni-nav {
+            margin-bottom: 25px;
+        }
+
+        .hlavni-menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .menu-odkaz {
+            display: inline-block;
+            background: var(--bila);
+            color: var(--text-svetly);
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 10px rgba(30, 58, 31, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .menu-odkaz:hover {
+            color: var(--temna-zelena);
+            transform: translateY(-2px);
+        }
+
+        .menu-odkaz.aktivni {
+            background: var(--temna-zelena);
+            color: var(--bila);
+            box-shadow: 0 4px 15px rgba(30, 58, 31, 0.15);
+        }
+
+        /* Hlavní vizitka */
         .karta-hlavni {
             background: var(--bila);
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(30, 58, 31, 0.05);
             text-align: center;
-            border-top: 8px solid transparent; /* Zářivý pruh nahoře */
+            border-top: 8px solid transparent; /* Barevný pruh nahoře */
             border-image: var(--teply-gradient) 1;
             position: relative;
             overflow: hidden;
@@ -59,7 +98,7 @@
         h1 {
             color: var(--temna-zelena);
             margin: 0 0 5px 0;
-            font-size: 2.4rem;
+            font-size: 2.2rem;
         }
 
         h2 {
@@ -71,81 +110,14 @@
             margin: 0;
         }
 
-        h3 {
-            color: var(--temna-zelena);
-            font-size: 1.4rem;
-            margin-top: 0;
-            margin-bottom: 20px;
-            border-bottom: 2px solid var(--svetla-zelena);
-            padding-bottom: 10px;
-        }
-
         p {
             font-size: 1.1rem;
             color: var(--text-svetly);
             margin: 15px 0;
-            text-align: justify;
+            text-align: center;
         }
 
-        ul {
-            padding-left: 20px;
-            color: var(--text-svetly);
-            font-size: 1.05rem;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        .sekce-obsah {
-            background: var(--bila);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(30, 58, 31, 0.05);
-            margin-bottom: 30px;
-        }
-
-        /* Speciální úprava pro sekci kontaktu - barevný pruh dole */
-        .sekce-kontakt {
-            background: var(--bila);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(30, 58, 31, 0.05);
-            margin-bottom: 30px;
-            border-bottom: 6px solid transparent; 
-            border-image: var(--teply-gradient) 1;
-        }
-
-        .misto-item {
-            margin-bottom: 25px;
-            padding-left: 15px;
-            border-left: 3px solid var(--oranzova-akcent);
-        }
-
-        .misto-item:last-child {
-            margin-bottom: 0;
-            border-left-image: var(--teply-gradient) 1;
-        }
-
-        .misto-nazev {
-            font-weight: bold;
-            font-size: 1.15rem;
-            color: var(--temna-zelena);
-            margin-bottom: 5px;
-        }
-
-        .misto-popis {
-            font-size: 1rem;
-            color: var(--text-svetly);
-            margin: 0;
-        }
-
-        .zvyrazneni {
-            padding: 0;
-            font-weight: 600;
-            color: var(--oranzova-akcent); 
-        }
-
+        /* Status box se spodním pruhem */
         .status-box {
             background: var(--svetla-zelena);
             padding: 12px 20px;
@@ -155,57 +127,25 @@
             font-weight: 600;
             display: inline-block;
             margin-top: 15px;
-        }
-
-        /* Styly pro ceník */
-        .cenik-polozka {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-
-        .cenik-nazev {
-            font-weight: bold;
-            color: var(--temna-zelena);
-        }
-
-        .cenik-cena {
-            font-weight: bold;
-            color: var(--oranzova-akcent); 
-            white-space: nowrap;
-            font-size: 1.2rem;
-        }
-
-        .cenik-popis {
-            font-size: 0.95rem;
-            color: var(--text-svetly);
-            margin-top: -10px;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-
-        .kontakt-udaj {
-            font-size: 1.2rem;
-            margin: 12px 0;
-            color: var(--temna-zelena);
-        }
-
-        .kontakt-udaj strong {
-            color: var(--oranzova-akcent);
-        }
-
-        .kontakt-poznamka {
-            font-size: 0.95rem;
-            color: var(--text-svetly);
-            margin-left: 32px;
-            margin-top: -8px;
-            font-style: italic;
+            border-bottom: 5px solid transparent; /* Barevný pruh dole */
+            border-image: var(--teply-gradient) 1;
         }
     </style>
 </head>
 <body>
+
+    <div class="kontejner">
+        
+        <!-- Navigační menu -->
+        <nav class="hlavni-nav">
+            <ul class="hlavni-menu">
+                <li><a href="index.html" class="menu-odkaz aktivni">Úvod</a></li>
+                <li><a href="o-mne.html" class="menu-odkaz">O mně</a></li>
+                <li><a href="lecba.html" class="menu-odkaz">Průběh léčby</a></li>
+                <li><a href="cenik.html" class="menu-odkaz">Ceník</a></li>
+                <li><a href="kontakt.html" class="menu-odkaz">Kontakt</a></li>
+            </ul>
+        </nav>
 
     <div class="kontejner">
         <!-- Hlavní vizitka -->
@@ -218,6 +158,13 @@
                 🌱 Stránky pro vás momentálně připravuji
             </div>
         </div>
+
+    </div>
+
+</body>
+</html>
+
+<!--
 
           <!-- Sekce O mně -->
         <div class="sekce-obsah">
@@ -444,3 +391,4 @@
 
 </body>
 </html>
+-->
