@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Průběh léčby - Mgr. Pavla Rotterová, Ph.D.</title>
+    <style>
+        :root {
+            --temna-zelena: #1e3a1f;
+            --svetla-zelena: #f4f9e4;
+            --text-hlavni: #1f2b20;
+            --text-svetly: #4e5e4f;
+            --bila: #ffffff;
+            --oranzova-akcent: #ff7b00;
+            --teply-gradient: linear-gradient(90deg, #ffd000 0%, var(--oranzova-akcent) 50%, #d90429 100%);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--svetla-zelena);
+            color: var(--text-hlavni);
+            margin: 0;
+            padding: 20px 20px 40px 20px;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .kontejner {
+            max-width: 650px;
+            width: 100%;
+        }
+
+        .hlavni-nav {
+            margin-bottom: 25px;
+        }
+
+        .hlavni-menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .menu-odkaz {
+            display: inline-block;
+            background: var(--bila);
+            color: var(--text-svetly);
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 10px rgba(30, 58, 31, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .menu-odkaz:hover {
+            color: var(--temna-zelena);
+            transform: translateY(-2px);
+        }
+
+        .menu-odkaz.aktivni {
+            background: var(--oranzova-akcent);
+            color: var(--bila);
+            box-shadow: 0 4px 15px rgba(255, 123, 0, 0.3);
+        }
+
+        .sekce-obsah {
+            background: var(--bila);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(30, 58, 31, 0.05);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pruh-horni, .pruh-spodni {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: var(--teply-gradient);
+        }
+        .pruh-horni { top: 0; }
+        .pruh-spodni { bottom: 0; }
+
+        h3 {
+            color: var(--temna-zelena);
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--svetla-zelena);
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--text-svetly);
+            margin: 15px 0;
+            text-align: justify;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: var(--text-svetly);
+            font-size: 1.05rem;
+        }
+
+        li {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .zvyrazneni {
+            padding: 0;
+            font-weight: 600;
+            color: var(--oranzova-akcent); 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="kontejner">
+        
+        <!-- Navigační menu (s aktivní záložkou Průběh léčby) -->
+        <nav class="hlavni-nav">
+            <ul class="hlavni-menu">
+                <li><a href="index.html" class="menu-odkaz">Úvod</a></li>
+                <li><a href="o-mne.html" class="menu-odkaz">O mně</a></li>
+                <li><a href="lecba.html" class="menu-odkaz aktivni">Průběh léčby</a></li>
+                <li><a href="cenik.html" class="menu-odkaz">Ceník</a></li>
+                <li><a href="kontakt.html" class="menu-odkaz">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hlavní karta Jak probíhá léčba -->
+        <div class="sekce-obsah">
+            <div class="pruh-horni"></div>
+            
+<h3>Jak probíhá léčba?</h3>
+            <p>Postklasická homeopatie nahlíží na člověka jako na celistvý příběh a umožňuje zacílit 
+                léčbu na organismus jako celek, případně se zaměřit na jednotlivé orgány, které potřebují 
+                vyladit ke své optimální funkci – včetně mozku a nervové soustavy.
+                Pomocí přesných na sebe navazujících léků umí léčit také chronické stavy a nemoci. 
+                Dokonce i takové, se kterými si klasická západní medicína neumí pořádně poradit 
+                (viz moje osobní zkušenost s léčbou roztroušené sklerózy popsaná v sekci O mně).
+            </p>
+            <p>Pro správné pochopení postupu je důležité rozlišovat dva stavy:</p>
+            <ul>
+                <li><strong>Akutní problém:</strong> Nově vzniklý stav v současnosti, 
+                    který člověk v minulosti ještě nikdy nezažil. Na řešení čistě akutních stavů tato 
+                    metoda primárně určená není, neboť podáním léku se patologie nejprve uvolňuje navenek
+                    a až následně dochází k celkovému uzdravení. V takových chvílích však člověk často 
+                    vyžaduje rychlou úlevu od bolesti či diskomfortu, 
+                    což je v rozporu s principem postupného uvolňování zátěže.</li>
+                <li><strong>Chronický stav:</strong> Potíže, které trvají delší dobu (od několika dní 
+                    po celé roky) nebo se v životě cyklicky opakují. Postklasická homeopatie je k řešení 
+                    chronických stavů naprosto výborná.</li>
+            </ul>
+            <p>
+                Léčba dlouhodobých chronických potíží vyžaduje čas a trpělivost – tyto problémy se v těle tvořily dlouhou dobu, 
+                proto i jejich odstraňování probíhá postupně po jednotlivých vrstvách. 
+                Pomocí jednoho či dvou léků lze organismus pročistit a zoptimalizovat pouze v případě, 
+                že člověk netrpí žádnými zjevnými ani skrytými potížemi. 
+                Dlouhodobý chronický problém však jeden či dva léky vyřešit nedokážou. 
+                Přesto má každý jednotlivý podaný lék obrovský smysl – postupně posiluje 
+                Vaši vitální sílu (samouzdravovací schopnost organismu), díky čemuž klienti 
+                po zastavení postupu nemoci pociťují pozvolné a trvalé zlepšování celkové kondice. 
+                Tento hluboký proces posilování vnitřní síly a postupné obnovy zdraví 
+                ostatně každý den s vděčností zažívám sama u sebe.
+            </p>
+       </div>
+
+        <!-- Sekce Čemu věnovat pozornost -->
+        <div class="sekce-obsah">
+            <h3>Čemu v průběhu léčby věnovat pozornost?</h3>
+            <p>Během homeopatické léčby je nesmírně důležité vnímat a sledovat reakce svého organismu. 
+                Reakce na podané léky mohou mít psychickou i fyzickou podobu a mohou se projevovat pozitivně i negativně.</p>
+            <p>Pozitivní změny (příval energie, lepší nálada, mírnění bolestí) lidé obvykle vnímají přirozeně. 
+                Negativní reakce mohou být přechodně nepříjemné – dochází při nich k uvolňování staré patologie 
+                z těla ven. Je však důležité mít na paměti, že v rámci postklasické homeopatie tělo uvolní vždy 
+                jen tolik zátěže, kolik samo bezpečně zvládne.</p>
+            <p><strong>Je velmi důležité si každou reakci pečlivě zapsat a poznačit si, po kterém konkrétním léku 
+                nastala.</strong> Dostatek přesných informací o dosavadním průběhu léčby a vzniklých reakcích mi 
+                v pokračovací konzultaci umožní přesně zvolit další homeopatické léky pro úspěšné pokračování Vaší léčby.</p>
+
+             <p style="margin-top: 25px; font-weight: bold; color: var(--temna-zelena);">
+                ⚠️ Důležitá pravidla pro užívání léků:
+            </p>
+            <ul>
+                <li>
+                    <strong>Klasická západní medicína:</strong> Homeopatickou léčbu lze bez obav a libovolně 
+                    kombinovat s klasickými léky západní medicíny, které obsahují chemickou účinnou látku. 
+                    Své stávající léky předepsané lékařem nikdy sami nevysazujte.
+                </li>
+                <li>
+                    <strong>Nekombinovat s jinou informační léčbou:</strong> Pro úspěch léčby je naprosto 
+                    klíčové <span class="zvyrazneni">nekombinovat</span> moje doporučení s jinými informačními 
+                    přípravky (např. jiná homeopatika, kapky od firem Energy, Joalis apod.) a neužívat ani komerční 
+                    vícesložkové homeopatické mixy. Jako terapeutka pak nejsem schopna odhadnout, jak se tyto 
+                    různorodé informace v organismu nakombinují a co přesně v těle způsobí.
+                </li>
+                <li>
+                    <strong>Zákaz kovových lžiček:</strong> Pokud homeopatický lék podáváte naředěný ve vodě, 
+                    <span class="zvyrazneni">nikdy jej nemíchejte ani nenabírejte kovovou lžičkou</span>. 
+                    Kov jako vysoce vodivý materiál může znehodnotit jemnou energetickou informaci v léku. 
+                    Použijte lžičku plastovou, dřevěnou nebo porcelánovou, případně se z nekovové nádoby 
+                    (např. sklenice) rovnou douškem napijte.
+                </li>
+                 <li>
+                    <strong>Skladování naředěného léku:</strong> Pokud máte homeopatický lék 
+                    naředěný ve vodě, <span class="zvyrazneni">uchovávejte jej v chladu, nejlépe v chladničce</span>, 
+                    aby se voda po dobu užívání nezkazila. Před samotným podáním je však dobré nechat lék 
+                    chvíli temperovat na pokojovou teplotu.
+                </li>
+                <li>
+                    <strong>Pravidlo před a po užití:</strong> Pro správnou účinnost homeopatického léku 
+                    je nutné dodržet čistotu v ústech – přibližně <span class="zvyrazneni">10 minut před 
+                    ani po podání léku nic nepijte</span> ani nejezte.
+                </li>
+            </ul>
+            
+            <p>Pokud by pro Vás byla jakákoli reakce v průběhu léčby extrémně nepříjemná, omezující nebo 
+                obtěžující, neváhejte mě neprodleně kontaktovat. Společně probereme, jak si můžete ulevit
+                a jak v léčbě bezpečně postupovat dále.
+            </p>
+
+            <div class="pruh-spodni"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>
