@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceník služeb - Mgr. Pavla Rotterová, Ph.D.</title>
+    <style>
+        :root {
+            --temna-zelena: #1e3a1f;
+            --svetla-zelena: #f4f9e4;
+            --text-hlavni: #1f2b20;
+            --text-svetly: #4e5e4f;
+            --bila: #ffffff;
+            --oranzova-akcent: #ff7b00;
+            --teply-gradient: linear-gradient(90deg, #ffd000 0%, var(--oranzova-akcent) 50%, #d90429 100%);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--svetla-zelena);
+            color: var(--text-hlavni);
+            margin: 0;
+            padding: 20px 20px 40px 20px;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .kontejner {
+            max-width: 650px;
+            width: 100%;
+        }
+
+        .hlavni-nav {
+            margin-bottom: 25px;
+        }
+
+        .hlavni-menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .menu-odkaz {
+            display: inline-block;
+            background: var(--bila);
+            color: var(--text-svetly);
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 10px rgba(30, 58, 31, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .menu-odkaz:hover {
+            color: var(--temna-zelena);
+            transform: translateY(-2px);
+        }
+
+        .menu-odkaz.aktivni {
+            background: var(--oranzova-akcent);
+            color: var(--bila);
+            box-shadow: 0 4px 15px rgba(255, 123, 0, 0.3);
+        }
+
+        .sekce-obsah {
+            background: var(--bila);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(30, 58, 31, 0.05);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pruh-horni, .pruh-spodni {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: var(--teply-gradient);
+        }
+        .pruh-horni { top: 0; }
+        .pruh-spodni { bottom: 0; }
+
+        h3 {
+            color: var(--temna-zelena);
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--svetla-zelena);
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--text-svetly);
+            margin: 15px 0;
+            text-align: justify;
+        }
+
+        .misto-item {
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 3px solid var(--oranzova-akcent);
+        }
+
+        .misto-item:last-child {
+            margin-bottom: 0;
+            border-left-image: var(--teply-gradient) 1;
+        }
+
+        .misto-nazev {
+            font-weight: bold;
+            font-size: 1.15rem;
+            color: var(--temna-zelena);
+            margin-bottom: 5px;
+        }
+
+        .misto-popis {
+            font-size: 1rem;
+            color: var(--text-svetly);
+            margin: 0;
+            text-align: justify;
+        }
+
+        .zvyrazneni {
+            padding: 0;
+            font-weight: 600;
+            color: var(--oranzova-akcent); 
+        }
+
+        .cenik-polozka {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .cenik-nazev {
+            font-weight: bold;
+            color: var(--temna-zelena);
+        }
+
+        .cenik-cena {
+            font-weight: bold;
+            color: var(--oranzova-akcent); 
+            white-space: nowrap;
+            font-size: 1.2rem;
+        }
+
+        .cenik-popis {
+            font-size: 0.95rem;
+            color: var(--text-svetly);
+            margin-top: -10px;
+            margin-bottom: 20px;
+            font-style: italic;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="kontejner">
+        
+        <!-- Navigační menu (s aktivní záložkou Ceník) -->
+        <nav class="hlavni-nav">
+            <ul class="hlavni-menu">
+                <li><a href="index.html" class="menu-odkaz">Úvod</a></li>
+                <li><a href="o-mne.html" class="menu-odkaz">O mně</a></li>
+                <li><a href="lecba.html" class="menu-odkaz">Průběh léčby</a></li>
+                <li><a href="cenik.html" class="menu-odkaz aktivni">Ceník</a></li>
+                <li><a href="kontakt.html" class="menu-odkaz">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hlavní karta Ceník a Místa setkávání -->
+        <div class="sekce-obsah">
+            <div class="pruh-horni"></div>
+            
+            <h3>Ceník služeb</h3>
+            
+            <div class="cenik-polozka">
+                <span class="cenik-nazev">Úvodní konzultace</span>
+                <span class="cenik-cena">1 800 Kč</span>
+            </div>
+            <div class="cenik-popis">Délka trvání přibližně 1 hodina. Cena zahrnuje podrobné odebrání Vašeho problému či problémů včetně jejich historického vývoje, detailní analýzu celého odebraného případu, sestavení plánu individuální léčby a první 4 homeopatické léky vybrané klientovi přímo na míru přibližně na 3 až 4 měsíce léčby. V ceně jsou zahrnuty i drobné konzultace k řešení případných akutně vzniklých obtíží či reakcí na léčbu v průběhu tohoto období.</div>
+
+            <div class="cenik-polozka">
+                <span class="cenik-nazev">Pokračovací konzultace</span>
+                <span class="cenik-cena">1 200 Kč</span>
+            </div>
+            <div class="cenik-popis">Délka trvání přibližně 30 minut. Společně probereme reakce na léčbu, které nastaly. Následně individuálně vyberu další 4 léky přibližně na 3 až 4 měsíce pokračování léčby, které jako klient dostanete v ceně. V ceně jsou rovněž zahrnuty i drobné konzultace pro řešení akutních stavů nebo projevů spojených s léčbou.</div>
+            
+           <div style="font-size: 0.95rem; color: var(--text-svetly); font-style: italic; margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--svetla-zelena); line-height: 1.5;">
+                🌱 <em>Upozornění:</em> Jestliže nepokračujete v léčbě a neproběhne další konzultace do cca půl roku od té předchozí, pro správné určení dalšího postupu je nutné absolvovat opět úvodní konzultaci.
+            </div>
+
+            <div class="pruh-spodni"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>
