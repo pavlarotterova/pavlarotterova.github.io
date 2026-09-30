@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O mně - Mgr. Pavla Rotterová, Ph.D.</title>
+    <style>
+        :root {
+            --temna-zelena: #1e3a1f;
+            --svetla-zelena: #f4f9e4;
+            --text-hlavni: #1f2b20;
+            --text-svetly: #4e5e4f;
+            --bila: #ffffff;
+            --oranzova-akcent: #ff7b00;
+            --teply-gradient: linear-gradient(90deg, #ffd000 0%, var(--oranzova-akcent) 50%, #d90429 100%);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--svetla-zelena);
+            color: var(--text-hlavni);
+            margin: 0;
+            padding: 20px 20px 40px 20px;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .kontejner {
+            max-width: 650px;
+            width: 100%;
+        }
+
+        .hlavni-nav {
+            margin-bottom: 25px;
+        }
+
+        .hlavni-menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .menu-odkaz {
+            display: inline-block;
+            background: var(--bila);
+            color: var(--text-svetly);
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 10px rgba(30, 58, 31, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .menu-odkaz:hover {
+            color: var(--temna-zelena);
+            transform: translateY(-2px);
+        }
+
+        .menu-odkaz.aktivni {
+            background: var(--oranzova-akcent);
+            color: var(--bila);
+            box-shadow: 0 4px 15px rgba(255, 123, 0, 0.3);
+        }
+
+        .sekce-obsah {
+            background: var(--bila);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(30, 58, 31, 0.05);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pruh-horni, .pruh-spodni {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: var(--teply-gradient);
+        }
+        .pruh-horni { top: 0; }
+        .pruh-spodni { bottom: 0; }
+
+        h3 {
+            color: var(--temna-zelena);
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--svetla-zelena);
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--text-svetly);
+            margin: 15px 0;
+            text-align: justify;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: var(--text-svetly);
+            font-size: 1.05rem;
+        }
+
+        li {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .zvyrazneni {
+            padding: 0;
+            font-weight: 600;
+            color: var(--oranzova-akcent); 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="kontejner">
+        
+        <!-- Navigační menu (s aktivní záložkou O mně) -->
+        <nav class="hlavni-nav">
+            <ul class="hlavni-menu">
+                <li><a href="index.html" class="menu-odkaz">Úvod</a></li>
+                <li><a href="o-mne.html" class="menu-odkaz aktivni">O mně</a></li>
+                <li><a href="lecba.html" class="menu-odkaz">Průběh léčby</a></li>
+                <li><a href="cenik.html" class="menu-odkaz">Ceník</a></li>
+                <li><a href="kontakt.html" class="menu-odkaz">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hlavní karta O mně se shodnými pruhy -->
+        <div class="sekce-obsah">
+            <div class="pruh-horni"></div>
+            
+                        <h3>O mně</h3>
+            <p>
+                Moje cesta k postklasické homeopatii nebyla teoretická, ale hluboce osobní. 
+                Dvacet let jsem žila s diagnózou roztroušené sklerózy mozkomíšní. 
+                Během této doby jsem si plně uvědomila, že západní medicína toto onemocnění vyléčit neumí 
+                – i přes péči špičkových odborníků v ČR je jejím nejlepším možným výsledkem pouze snaha 
+                o zastavení progrese, tedy o zakonzervování již zhoršeného stavu. 
+                Protože jsem se s tím nechtěla smířit a toužila jsem vracející se ataky zastavit, 
+                zkoušela jsem souběžně všechno možné i nemožné 
+                – od přísných diet a různých detoxikací organismu až po napravování energetického pole těla. 
+                Výsledné zlepšení bylo však pouze krátkodobého přechodného charakteru, tedy v podstatě nulové.
+            </p>
+             <p>
+                Zásadní zlom nastal po předčasném porodu mého třetího dítěte. 
+                Náročné období mě srazilo psychicky dolů, což vedlo k výraznému zhoršení 
+                mého fyzického stavu. V této krizi jsem na vlastní kůži prožila, jak moc jsou naše tělo 
+                a mysl propojené. Rozhodla jsem se tehdy vyzkoušet léčbu u postklasického homeopata 
+                a během několika měsíců se progresi onemocnění podařilo zastavit.
+            </p>
+            <p>
+                Můj stav se začal pozvolným tempem lepšit a celkově stabilizovat. 
+                I když nešlo o zázrak na počkání a proces uvolňování patologií nebyl vždy příjemný, 
+                došlo k celkové stabilizaci a začaly postupně ustupovat i ty velmi staré potíže, 
+                které mě provázely od samého počátku diagnózy.  Nadšení z těchto výsledků mě přivedlo 
+                k rozhodnutí, že bych toto umění léčení těla i duše chtěla pro život také umět.
+            </p>
+            <p>
+                Začátkem září 2026 jsem po tříletém studiu úspěšně složila závěrečnou zkoušku 
+                v České škole klasické a postklasické homeopatie pod vedením Mgr. Pavla Opelky, RHom. 
+                Od počátku studia se pravidelně účastním také Letních škol pořádaných Českou komorou 
+                klasické homeopatie, která je řádným členem Evropské centrální rady homeopatů (ECCH). 
+                Vzdělávání v tomto oboru vnímám jako celoživotní poslání.
+            </p>
+            <p>
+                Sama jsem se začala léčit ještě rok před začátkem studia a od té doby sbírám 
+                cenné zkušenosti. Prvotní sledování vlastních pokroků a úspěšná pomoc v rámci rodiny 
+                a přátel se postupně začaly rozšiřovat. Radost z prvních výsledků mě přirozeně posunula dál 
+                a dnes si ke mně nacházejí cestu i noví klienti, kteří potřebují pomoci se svým zdravím.
+            </p>
+            <p>
+                V mé dosavadní praxi se již podařilo pozvolna navrátit zdraví a dosáhnout hlubokých výsledků 
+                u řady konkrétních potíží:
+            </p>
+            <ul>
+                <li>
+                    <strong>Uvolnění chronických stavů:</strong> Uvolněním dlouhodobých zánětů dutin 
+                    a počínajícího astmatu se léčený člověk mohl po letech plnohodnotně vrátit k běhání 
+                    a aktivnímu hraní fotbalu.
+                </li>
+                <li>
+                    <strong>Dětské zdraví a zrání organismu:</strong> U dětí úspěšně pomáhám řešit 
+                    mechanické, růstové a neurologické potíže, které se často přímo odrážejí 
+                    i v jejich psychické nepohodě. Krásným osobním příkladem je moje dcera – homeopatických léčbou na míru
+                    se její oteklá nosní mandle zmenšila na normální velikost a upravil se také tlak v uších, 
+                    což vedlo k úplné nápravě zhoršeného sluchu. Podané homeopatické léky navíc podpořily přirozené dozrávání mozku 
+                    a celkový rozvoj vnímání a myšlení.
+                </li>
+                <li>
+                    <strong>Psychická úleva:</strong> Paní trpící depresemi začala po několika měsících 
+                    postupné léčby opět prožívat pocity štěstí a radosti ze života.
+                </li>
+            </ul>
+            <p>
+                Jako absolventka aplikované matematiky s doktorským titulem (Ph.D.) jsem v postklasické 
+                homeopatii objevila fascinující logiku, řád a smysluplné zákonitosti. Tyto principy mi umožňují 
+                přistupovat k léčbě se systematickou precizností – vnímat tělo i mysl jako jeden provázaný celek, 
+                ale zároveň se přesně zaměřit na optimální funkci jednotlivých orgánů včetně mozku 
+                (ADHD, autismus, poruchy dys-, ...).
+            </p>
+
+            <div class="pruh-spodni"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>
